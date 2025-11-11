@@ -8,4 +8,5 @@
 * I18next
 * AntD
 * React-router
-* 
+* Jest
+
