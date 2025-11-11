@@ -1,12 +1,11 @@
 import React from "react";
 import "./main-css/App.css";
-import LoginForm from "./components/pages/login/Login";
+import AppRouter from './router/Router'
 
 function App() {
-  return <div className="">
-    App
-    <LoginForm />
-  </div>;
+  return (
+    <AppRouter/>
+  );
 }
 
 export default App;
