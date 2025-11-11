@@ -1,23 +1,16 @@
-
 import * as React from "react";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <div> Hello World! </div>
-  },
-  {
-    path: "*",
-    element: <div>Not found</div>
-  }
-]);
+import { Home, NotFound, Food, Tv, Massage } from "../components/pages";
 
-function AppRouter() {
-  return <RouterProvider router = {router}/>
-};
-
-export default AppRouter;
+export default function Router() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/food" element={<Food />} />
+      <Route path="/tv" element={<Tv />} />
+      <Route path="/personal/massage" element={<Massage />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+}
